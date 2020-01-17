@@ -1,6 +1,6 @@
 # Puhelinluettelo
 
-Lisää ominaisuuksia ja backendin testaamista JSON serverillä. Serveri lähtee käyntiin komennolla npm run server.
+Lisää ominaisuuksia ja backendin testaamista JSON serverillä. Serveri lähtee käyntiin komennolla npm run server. <br> Koko kurssi löytyy [täältä](https://github.com/Temez1/fullstackOpen2019)
 
 ### `npm start`
 
