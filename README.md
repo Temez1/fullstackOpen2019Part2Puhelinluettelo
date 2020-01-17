@@ -1,6 +1,6 @@
 # Puhelinluettelo
 
-
+Lisää ominaisuuksia ja backendin testaamista JSON serverillä. Serveri lähtee käyntiin komennolla npm run server.
 
 ### `npm start`
 
