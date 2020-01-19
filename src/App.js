@@ -73,6 +73,8 @@ const App = () => {
       if (!window.confirm("Are you sure?")) {
          return
       }
+
+      console.log(persons)
       const personToDelete = persons.find(person => person.id === id)
 
       personService
