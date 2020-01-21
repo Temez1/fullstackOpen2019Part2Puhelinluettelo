@@ -47,7 +47,7 @@ const App = () => {
                newNotification(`Updated ${updatedPerson.name}`, 'success')
             })
             .catch(error => {
-               newNotification(`Information of ${person.name} has already been removed from the server`, 'fail')
+               newNotification(error.response.data.error, 'fail')
             })
             return
          }
@@ -60,6 +60,9 @@ const App = () => {
             setPersons(persons.concat(returnedPerson))
             resetFormFields()
             newNotification(`Added ${returnedPerson.name}`, 'success')
+         })
+         .catch(error => {
+            newNotification(`${error.response.data.error}`, 'fail')
          })
    }
 
@@ -77,12 +80,12 @@ const App = () => {
 
       personService
          .deletePerson(id)
-         .then( () => {
+         .then(() => {
             setPersons(persons.filter(person => person.id !== id))
             newNotification(`Deleted ${personToDelete.name}`, 'success')
          })
          .catch(error => {
-            newNotification(`Couldn't remove ${personToDelete.name}. Person might be deleted already`, 'fail')
+            newNotification(`Error: ${error.response.data.error}`, 'fail')
          })
    }
 
